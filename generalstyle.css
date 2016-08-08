@@ -1,0 +1,298 @@
+/* ================== General Layout ===================================== */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, Times, Times New Roman, serif;
+}
+
+ div.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+div.header {
+	width: 100%;
+	padding: 1em;
+	text-align: center;
+	text-shadow: 3px 3px #DDD;
+	background-color: #85CD00;
+	font-size: 1.5em;
+	border: .1em solid #000;
+}
+
+div.footer {
+	width: 100%;
+	padding: 2em;
+	text-align: center;
+	background-color: #CFBEA5;
+	border: .1em solid #000;
+
+}
+
+
+
+/* +++++++++++++++++++ Content +++++++++++++++++++++++++++ */
+
+div.content {
+	min-width: 900px;
+	height: 38em;
+	padding: 0;
+	margin: 0 auto;	
+
+}
+div.leftcolumn {
+	display: block;
+	float: left;
+	width: 70%;
+	height: 600px;	
+	padding: 0;
+	margin: 0;
+
+}
+div.rightcolumn {
+	display: block;
+	float: left;
+	width: 29%;
+	background-color: #FEFDFB;
+}
+
+
+
+/* ==================  Start Box/ End of Game / Reset Box ===================================== */
+
+div#startbox, div#winnerbox, div#gameoverbox {
+	width: 26em;
+	height: 15em;
+	z-index: 2;
+	margin: 0 auto;
+	padding: 1em;
+	position: absolute;
+	top: 15em;
+	left: 5em;
+	box-shadow: .2em .2em .75em;
+	background-color: white;
+	font-size: 1.25em;
+	border-radius: .5em;	
+	border: .5em solid green;
+}
+
+div#startbox {
+	visibility: visible;
+}
+
+div#winnerbox, div#gameoverbox {
+	visibility: hidden;
+}
+
+button#startbtn, button#tryagainbtn, button#playagainbtn {
+	display: block;
+	border-radius: .5em;
+	padding: 10px;
+	width: 7em;
+	margin: 0 auto;
+	background-color: #85CD00;
+	color: #FFF;
+	font-size: 1.2em;
+}
+/* ================== Right Column ===================================== */
+/* ======= Fruit Name Generator ===== */
+
+
+span#fruitinselectedlanguage {
+	font-size: 1.5em;
+	display: block;
+}
+
+span#currentfruitname {
+	display: block;
+	color: #009900;
+	font-weight: 900;
+	height: 15px;
+	font-size: 1.5em;
+	text-transform: uppercase;
+}
+
+/* ===== Correct Matches Box ====== */
+
+div.nummatches {
+	width: 10em;
+	height: 4em;
+	z-index: 2;
+	margin: 0;
+	padding: .25em;
+	font-size: 2em;
+	border-radius: .5em;
+	background-color: white;
+	color: #FF8C00;
+	border: 2px solid #FF8C00;
+	position: absolute;
+	top: 15em;
+}
+
+span#incorrect, span#correct {
+	display: block;
+	font-size: 2.8em;
+	color: red;
+	position: absolute;
+	top: 6em;
+	z-index: 3;
+	padding: .2em;
+	text-transform: uppercase;
+	visibility: hidden;
+}
+
+span#incorrect { color: red; }
+span#correct{ color: green; }
+
+span#correctmatches {
+	font-weight: 900;
+}
+
+
+/* ===== basket Box ===== */
+
+div#basket {
+	width: 20em;
+	height: 18em;
+	z-index: 2;
+	margin: 0;
+	padding: .5em;
+	background: url('../images/basket.jpg') no-repeat 0 0;
+	background-size: contain;
+	border-radius: .5em;	
+	border: 2px solid green;
+	position: absolute;
+}
+
+
+
+/* =========================================== Left Side =================================== */
+
+
+
+/* ================== tree ================= */
+
+div.tree {
+	 width: 730px;
+	 height:600px;
+	position: absolute;
+	background: url('../images/tree.gif') no-repeat 0 0;
+	background-size: cover;
+	background-color: lightblue;
+
+}
+
+
+/* ================== fruit ================= */
+
+
+div#fruitContainer {
+	width: 45em;
+	height: 15em;
+	z-index: 1;
+	margin: 6em auto;
+	position: absolute;
+	left: 2em;
+	visibility: hidden;
+}
+
+.fruit, .fruitfadeout  {
+	width: 95px;
+	height: 95px;
+	background-image: url('../images/fruit.gif');
+}
+
+div.fruitfadeout {
+	position: absolute;
+	top: 70px;
+	left: 60px;
+
+    -webkit-animation: fade 1s linear 0s 1 normal; /* Chrome, Safari, Opera */
+    animation: fade 1s linear 0s 1 normal;  
+    -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */ 
+    animation-fill-mode: forwards; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fade {
+    0%   {opacity: 1; }
+    25%   {opacity: .75; }
+    50%   {opacity: .5; }
+    75%   {opacity: .25; }
+    100% {opacity: 0; }
+}
+
+/* Standard syntax */
+@keyframes fade {
+    0%   {opacity: 1; }
+    25%   {opacity: .75; }
+    50%   {opacity: .5; }
+    75%   {opacity: .25; }
+    100% {opacity: 0; }
+}
+
+/* ================== fruit location on tree ================= */
+
+div.fl-1 {
+	top: 1em;
+	left: 2em;
+}
+
+div.fl-2 {
+	top: 1.5em;
+	left: 8em;
+}
+
+div.fl-3 { 
+	top: .4em;
+	left: 15em;
+}
+
+div.fl-4 { 
+	top: 1em;
+	left: 30em;
+}
+
+div.fl-5 {
+	top: 8em;
+	left: 3em;
+}
+
+div.fl-6 {
+	top: 7em;
+	left: 15em;
+}
+
+div.fl-7 {
+	top: 7em;
+	left: 24em;
+}
+
+div.fl-8 {
+	top: 9em;
+	left: 30em;
+}
+
+div.fl-9 {
+	top: 7.5em;
+	left: 38em;
+}
+
+div[class*='fl-'] {
+	width: 95px;
+	height: 95px;
+	position: absolute;
+}
+
+div#banana { background-position: -10px 0; }
+div#orange { background-position: -100px 0; }
+div#lemon { background-position: -200px 0; }
+div#strawberry { background-position: -10px -100px; }
+div#cherries { background-position: -100px -100px; }
+div#pear { background-position: -200px -100px; }
+div#watermelon { background-position: -10px -200px; }
+div#apple { background-position: -100px -200px; }
+div#grapes { background-position: -200px -200px; }

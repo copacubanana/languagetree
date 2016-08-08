@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+     <meta charset="UTF-8">
+     <link rel="stylesheet" type="text/css" href="styles/generalstyle.css">
+     <title>Language Tree - fruits</title>
+</head>
+
+<body>
+	<div class='row'>
+		<div class='header'>
+			<h1>Language Tree</h1>
+			<h4>Play a game and sharpen your language skills</h4>
+		</div>
+	</div>
+	<div class='row'>
+		<div class='content'>
+			<div class='leftcolumn'>
+			<div class='tree'>
+				<div id='fruitContainer'>
+					<div class='fruitlocation fl-1'></div>
+					<div class='fruitlocation fl-2'></div>
+					<div class='fruitlocation fl-3'></div>
+					<div class='fruitlocation fl-4'></div>
+					<div class='fruitlocation fl-5'></div>
+					<div class='fruitlocation fl-6'></div>
+					<div class='fruitlocation fl-7'></div>
+					<div class='fruitlocation fl-8'></div>
+					<div class='fruitlocation fl-9'></div>
+				</div>
+		  </div>
+		  </div>		 
+			
+<!-- ======================== Directions elements ================================== -->
+				<div id='startbox'>
+					<p><b>Directions:</b><br>
+						Click the Start button.  Different names of fruit will 
+					   appear on the right hand side.  Drag the correct fruit into the 
+					   basket.</p>
+					   <br>  
+					<p><b>Language:</b><br> Spanish</p>
+					<button id='startbtn'>Start Game</button>
+				</div>
+				<div id='winnerbox'>
+					<p><b>Congratulations</b><br>
+					You matched all of the fruits with their names.  Good Job!</p>
+					   <br>  
+					<button id='playagainbtn'>Play Again?</button>
+				</div>
+				<div id='gameoverbox'>
+					<p><b>Game Over</b><br>
+						You matched <span id='gameovermatchcount'></span> out of 9</p>
+					   <br>  
+					<button id='tryagainbtn'>Try Again?</button>
+				</div>
+		
+		<div class='rightcolumn'>
+				<div id='basket'>
+					<span id='fruitinselectedlanguage'><b>Frutas:</b></span>
+					<span id='currentfruitname'>fruit name appears here</span>
+					<span id='incorrect'>Incorrect</span>
+					<span id='correct'>Correct</span>
+				</div>
+				<div class='nummatches'>					
+					<h4>Correct Matches:</h4>
+					<span id='correctmatches'>0 </span>/ 9
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='row'>	
+		<div class='footer'>
+			Charlene Uban © 2016<br>
+			<a href='http://charleneuban.com'>charleneuban.com</a> | webdevelopment & webdesign
+		</div>
+	</div>
+	<!-- -->
+     <script type="text/javascript" src="scripts/script.js"></script>
+</body>
+</html> 
